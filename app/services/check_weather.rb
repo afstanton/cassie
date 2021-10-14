@@ -12,12 +12,14 @@ class CheckWeather
   end
 
   def check(zip)
+    cached = true
     weather = Weather.find_or_initialize_by(zip: zip)
-    if weather.new_record? || weather.updated_at < 30.minutes.ago
+    if weather.data.blank? || weather.updated_at < 30.minutes.ago
       weather.data = current(zip)
       weather.save
+      cached = false
     end
 
-    weather.data
+    return weather.data, cached
   end
 end
