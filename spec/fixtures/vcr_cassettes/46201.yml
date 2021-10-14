@@ -1,0 +1,44 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.openweathermap.org/data/2.5/weather?appid=BOGUS_TESTING_API_KEY&zip=46201
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json; charset=utf-8
+      User-Agent:
+      - OpenWeather Ruby Client/0.2.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - openresty
+      Date:
+      - Thu, 14 Oct 2021 16:02:08 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '492'
+      Connection:
+      - keep-alive
+      X-Cache-Key:
+      - "/data/2.5/weather?zip=46201"
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST
+    body:
+      encoding: UTF-8
+      string: '{"coord":{"lon":-86.1093,"lat":39.775},"weather":[{"id":802,"main":"Clouds","description":"scattered
+        clouds","icon":"03d"}],"base":"stations","main":{"temp":296.63,"feels_like":297.2,"temp_min":295.45,"temp_max":298.45,"pressure":1016,"humidity":83},"visibility":10000,"wind":{"speed":0.89,"deg":162,"gust":0.89},"clouds":{"all":40},"dt":1634227062,"sys":{"type":2,"id":2038073,"country":"US","sunrise":1634212423,"sunset":1634252800},"timezone":-14400,"id":0,"name":"Indianapolis","cod":200}'
+  recorded_at: Thu, 14 Oct 2021 16:02:08 GMT
+recorded_with: VCR 6.0.0
