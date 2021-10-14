@@ -21,11 +21,11 @@ http_interactions:
       Server:
       - openresty
       Date:
-      - Thu, 14 Oct 2021 16:02:08 GMT
+      - Thu, 14 Oct 2021 16:12:18 GMT
       Content-Type:
       - application/json; charset=utf-8
       Content-Length:
-      - '492'
+      - '489'
       Connection:
       - keep-alive
       X-Cache-Key:
@@ -38,7 +38,7 @@ http_interactions:
       - GET, POST
     body:
       encoding: UTF-8
-      string: '{"coord":{"lon":-86.1093,"lat":39.775},"weather":[{"id":802,"main":"Clouds","description":"scattered
-        clouds","icon":"03d"}],"base":"stations","main":{"temp":296.63,"feels_like":297.2,"temp_min":295.45,"temp_max":298.45,"pressure":1016,"humidity":83},"visibility":10000,"wind":{"speed":0.89,"deg":162,"gust":0.89},"clouds":{"all":40},"dt":1634227062,"sys":{"type":2,"id":2038073,"country":"US","sunrise":1634212423,"sunset":1634252800},"timezone":-14400,"id":0,"name":"Indianapolis","cod":200}'
-  recorded_at: Thu, 14 Oct 2021 16:02:08 GMT
+      string: '{"coord":{"lon":-86.1093,"lat":39.775},"weather":[{"id":803,"main":"Clouds","description":"broken
+        clouds","icon":"04d"}],"base":"stations","main":{"temp":296.8,"feels_like":297.36,"temp_min":295.45,"temp_max":298.45,"pressure":1015,"humidity":82},"visibility":10000,"wind":{"speed":1.34,"deg":161,"gust":4.02},"clouds":{"all":75},"dt":1634227938,"sys":{"type":2,"id":2038073,"country":"US","sunrise":1634212423,"sunset":1634252800},"timezone":-14400,"id":0,"name":"Indianapolis","cod":200}'
+  recorded_at: Thu, 14 Oct 2021 16:12:18 GMT
 recorded_with: VCR 6.0.0

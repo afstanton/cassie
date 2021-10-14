@@ -16,11 +16,11 @@ class CheckWeather
     cached = true
     weather = Weather.find_or_initialize_by(zip: zip)
     if weather.data.blank? || weather.updated_at < 30.minutes.ago
-      weather.data = self.current(zip)
+      weather.data = current(zip)
       weather.save
       cached = false
     end
 
-    return weather.data, cached
+    [weather.data, cached]
   end
 end
