@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 2021_10_14_010256) do
 
   create_table "weathers", force: :cascade do |t|
     t.string "zip", null: false
-    t.jsonb "data", null: false
+    t.jsonb "data"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["zip"], name: "index_weathers_on_zip", unique: true

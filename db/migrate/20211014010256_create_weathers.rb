@@ -1,8 +1,10 @@
+# frozen_string_literal: true
+
 class CreateWeathers < ActiveRecord::Migration[6.1]
   def change
     create_table :weathers do |t|
       t.string :zip, null: false
-      t.jsonb :data, null: false
+      t.jsonb :data
 
       t.timestamps
     end

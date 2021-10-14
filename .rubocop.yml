@@ -1,0 +1,9 @@
+require:
+  - rubocop-rails
+  - rubocop-rspec
+
+Documentation:
+  Enabled: false
+
+Rails/FilePath:
+  Enabled: false
