@@ -13,7 +13,11 @@ Things you may want to cover:
 
 * System dependencies
 
+Requires an account at https://home.openweathermap.org/ - the free account is pretty liberal with usage, and should do for this.
+
 * Configuration
+
+Copy .env.sample and set OPEN_WEATHER to yuor Open Weather API key.
 
 * Database creation
 
