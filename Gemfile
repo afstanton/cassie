@@ -67,3 +67,6 @@ gem 'dotenv-rails'
 
 # For Open Weather
 gem 'open-weather-ruby-client'
+
+# For address validation
+gem 'mainstreet'

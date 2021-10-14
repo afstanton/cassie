@@ -1,0 +1,56 @@
+<h1>Check the weather</h1>
+<div>
+<%= form_with url: check_weather_path do |form| %>
+  <%= form.label :address, "Address:" %>
+  <%= form.text_field :address %>
+  <%= form.submit %>
+<% end %>
+</div>
+
+<% unless @error_message.blank? %>
+  <div>
+    Error: </br>
+    <%= @error_message  %>
+  </div>
+  <br/>
+<% end %>
+
+<% unless @original_address.blank? %>
+  <div>
+    Original address: </br>
+    <%= @original_address %>
+  </div>
+  <br/>
+<% end %>
+
+<% unless @verified_address.blank? %>
+  <div>
+    Verified address: </br>
+    <%= @verified_address %>
+    </div>
+    <br/>
+<% end %>
+
+<% unless @weather.blank? %>
+  <div>
+    The following weather result is <%= @cached ? '' : 'not ' %>cached.<br/><br/>
+    Last retrieved at: <%= @weather.updated_at %><br/>
+  </div>
+  <div>
+    Temperature: <%= @weather.temp_f %> F<br/>
+    Feels like: <%= @weather.feels_like_f %> F<br/>
+    High: <%= @weather.high_temp_f %> F<br/>
+    Low: <%= @weather.low_temp_f %> F<br/>
+    Humidity: <%= @weather.humidity %>%<br/>
+    Description: <%= @weather.description %><br/>
+    <%= image_tag(@weather.icon_uri) %><br/>
+  </div>
+<% end %>
+
+<br/>
+<br/>
+<br/>
+<div>
+  Address verification performed by <%= link_to 'Nominatim', 'https://nominatim.org/' %>.<br/>
+  Weather from <%= link_to 'OpenWeather', 'https://openweathermap.org/api' %>.<br/>
+</div>

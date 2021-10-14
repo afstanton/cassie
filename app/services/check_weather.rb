@@ -21,6 +21,6 @@ class CheckWeather
       cached = false
     end
 
-    [weather.data, cached]
+    [weather, cached]
   end
 end
