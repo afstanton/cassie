@@ -3,14 +3,14 @@
 class WeatherController < ApplicationController
   def index
     @original_address = address_params['address']
-    if @original_address.present?
-      verifier = MainStreet::AddressVerifier.new(@original_address)
-      if verifier.success? && verifier.result.postal_code.present?
-        @weather, @cached = CheckWeather.check(verifier.result.postal_code)
-        @verified_address = verifier.result.address
-      else
-        @error_message = verifier.failure_message.present? ? verifier.failure_message : 'Zip code not found'
-      end
+    return if @original_address.blank?
+
+    verifier = MainStreet::AddressVerifier.new(@original_address)
+    if verifier.success? && verifier.result.postal_code.present?
+      @weather, @cached = CheckWeather.check(verifier.result.postal_code)
+      @verified_address = verifier.result.address
+    else
+      @error_message = verifier.failure_message.presence || 'Zip code not found'
     end
   end
 

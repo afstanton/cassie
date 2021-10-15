@@ -34,6 +34,6 @@ class Weather < ApplicationRecord
   # private
 
   def k_to_f(temp)
-    number_to_rounded((((temp.to_f - 273.15) * (9.0/5.0)) + 32.0), precision: 2)
+    number_to_rounded((((temp.to_f - 273.15) * (9.0 / 5.0)) + 32.0), precision: 2)
   end
 end
