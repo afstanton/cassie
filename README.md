@@ -30,7 +30,7 @@ bundle exec rake db:migrate
 
 * How to run the test suite
 
-bundle exec rspec
+bundle exec rspec (It's a bit light on specs for my taste, but I didn't have time for a full suite.)
 
 * Services (job queues, cache servers, search engines, etc.)
 
