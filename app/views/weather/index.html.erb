@@ -1,13 +1,13 @@
 <h1>Check the weather</h1>
 <div>
 <%= form_with url: check_weather_path do |form| %>
-  <%= form.label :address, "Address:" %>
+  <%= form.label :address, 'Address:' %>
   <%= form.text_field :address %>
-  <%= form.submit %>
+  <%= form.submit 'Submit' %>
 <% end %>
 </div>
-
-<% unless @error_message.blank? %>
+<br/>
+<% if @error_message.present? && @original_address.present? %>
   <div>
     Error: </br>
     <%= @error_message  %>
@@ -36,6 +36,7 @@
     The following weather result is <%= @cached ? '' : 'not ' %>cached.<br/><br/>
     Last retrieved at: <%= @weather.updated_at %><br/>
   </div>
+  <h3>Weather for zip code <%= @weather.zip %>:</h3>
   <div>
     Temperature: <%= @weather.temp_f %> F<br/>
     Feels like: <%= @weather.feels_like_f %> F<br/>
