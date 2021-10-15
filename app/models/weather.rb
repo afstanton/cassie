@@ -31,9 +31,9 @@ class Weather < ApplicationRecord
     data['weather'][0]['icon_uri']
   end
 
-  private
+  # private
 
   def k_to_f(temp)
-    number_to_rounded((((temp - 273.15) * (9/5)) + 32), precision: 2)
+    number_to_rounded((((temp.to_f - 273.15) * (9.0/5.0)) + 32.0), precision: 2)
   end
 end
