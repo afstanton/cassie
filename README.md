@@ -17,7 +17,7 @@ Requires an account at https://home.openweathermap.org/ - the free account is pr
 
 * Configuration
 
-Copy .env.sample and set OPEN_WEATHER to your Open Weather API key.
+Copy .env.sample to .env and set OPEN_WEATHER to your Open Weather API key.
 
 * Database creation
 
